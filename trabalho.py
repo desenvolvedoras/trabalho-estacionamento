@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-import string
+import sqlite3
 
 janela = tk.Tk()
 janela.title("Gerenciador de Vagas- Estacionamento Frangiomar")
@@ -13,16 +13,7 @@ def cadastrar():
     if placa == "" or modelo == "" or cor == "":
         messagebox.showerror("Erro", "Todos os campos devem ser preenchidos.")
         return
-    try:
-        float(placa)
-    except ValueError:
-        messagebox.showerror("Erro", "Placa deve ser numérico.")
-        return
-    try:
-        string(modelo,cor)
-    except ValueError:
-        messagebox.showerror("Erro", "Valor deve ser numérico.")
-        return
+    
 
 
 #DEFINE ABAS
